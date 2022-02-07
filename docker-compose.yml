@@ -8,7 +8,7 @@ services:
     ports:
       - 80:80
     volumes:
-      - c:\Users\Brett\Documents\Docker\website\src:/var/www/html/
+      - c:\Users\Brett\Documents\docker\container_site\src:/var/www/html/
   db:
     image: mysql
     command: --default-authentication-plugin=mysql_native_password
