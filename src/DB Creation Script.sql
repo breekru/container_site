@@ -10,7 +10,18 @@ SET NAMES utf8mb4;
 CREATE DATABASE `wps` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci */ /*!80016 DEFAULT ENCRYPTION='N' */;
 USE `wps`;
 
-DROP TABLE IF EXISTS `intake`;
+CREATE TABLE `customer` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `cust_id` varchar(25) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
+  `first_name` varchar(25) NOT NULL,
+  `last_name` varchar(25) NOT NULL,
+  `phone_num` varchar(25) NOT NULL,
+  `email` varchar(25) NOT NULL,
+  `past_tickets` varchar(25) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+
 CREATE TABLE `intake` (
   `id` int NOT NULL AUTO_INCREMENT,
   `first_name` varchar(25) NOT NULL,
@@ -30,4 +41,11 @@ CREATE TABLE `intake` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 
--- 2022-02-06 12:16:56
+DELIMITER ;;
+
+CREATE TRIGGER `intake_ai` AFTER INSERT ON `intake` FOR EACH ROW
+insert into customer(first_name, last_name, phone_num, email) values (new.first_name, new.last_name, new.phone_num, new.email);;
+
+DELIMITER ;
+
+-- 2022-02-08 11:11:00
