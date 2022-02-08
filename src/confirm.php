@@ -16,6 +16,7 @@ $last_id = $_SESSION['l_id'];
     </head>
     <body>
     <button onClick="window.print()">Print this page</button>
+    <button onClick="location.href='index.php'" type="button">Home</button>
     <br>
     </body>
 </html>
