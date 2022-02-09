@@ -18,6 +18,14 @@
             <label for="email">Email:</label><br>
             <input type="text" name="email" id="email">
             <br>
+            <label for ="status">Status</label><br>
+            <select id="status" name="status" form="intake">
+                <option value="New">New</option>
+                <option value="In Progress">In Progress</option>
+                <option value="Complete">Complete</option>
+            </select>
+
+            <br>
             <label for="dev_type">Device Type: </label><br>
             <select id="dev_type" name="dev_type" form="intake">
                 <option value="Desktop">Desktop</option>

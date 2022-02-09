@@ -28,6 +28,7 @@ CREATE TABLE `intake` (
   `last_name` varchar(25) NOT NULL,
   `phone_num` varchar(25) NOT NULL,
   `email` varchar(25) NOT NULL,
+  `status` varchar(25) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
   `dev_type` varchar(25) NOT NULL,
   `sn` varchar(25) NOT NULL,
   `issue` longtext NOT NULL,
@@ -48,4 +49,4 @@ insert into customer(first_name, last_name, phone_num, email) values (new.first_
 
 DELIMITER ;
 
--- 2022-02-08 11:11:00
+-- 2022-02-09 01:39:14

@@ -53,6 +53,7 @@ if ($result->num_rows > 0) {
     $lname = $row["last_name"];
     $phonenum = $row["phone_num"];
     $email = $row["email"];
+    $status = $row["status"];
     $devtype = $row["dev_type"];
     $serial = $row["sn"];
     $issue = $row["issue"];
@@ -95,6 +96,10 @@ $conn->close();
     <tr>
         <td>Email: </td>
         <td><?php echo $email; ?></td>
+    </tr>
+    <tr>
+        <td>Status: </td>
+        <td><?php echo $status; ?></td>
     </tr>
     <tr>
         <td>Device Type: </td>

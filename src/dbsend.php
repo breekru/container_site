@@ -20,6 +20,7 @@ $_SESSION["l_name"] = $lname;
 
 $ph = $_POST['phone_num'];
 $em = $_POST['email'];
+$status = $_POST['status'];
 $device = $_POST['dev_type'];
 $serial = $_POST['sn'];
 $iss = $_POST['issue'];
@@ -31,7 +32,7 @@ $permission1 = $_POST['perm1'];
 $permission2 = $_POST['perm2'];
 
 
-$sql = "INSERT INTO intake (first_name, last_name, phone_num, email, dev_type, sn, issue, acc_power, acc_mouse, acc_keyboard, acc_hdd, perm1, perm2) VALUES ('$fname', '$lname', '$ph', '$em', '$device', '$serial', '$iss', '$power', '$mouse', '$keyboard', '$hdd', '$permission1', '$permission2')";
+$sql = "INSERT INTO intake (first_name, last_name, phone_num, email, status, dev_type, sn, issue, acc_power, acc_mouse, acc_keyboard, acc_hdd, perm1, perm2) VALUES ('$fname', '$lname', '$ph', '$em', '$status', '$device', '$serial', '$iss', '$power', '$mouse', '$keyboard', '$hdd', '$permission1', '$permission2')";
 
 
 
@@ -50,7 +51,7 @@ $_SESSION["l_id"] = $last_id;
 <html>
     <head>
         <title>Intake Created</title>
-        <meta http-equiv="Refresh" content="20; url='http://localhost/confirm.php'" />
+        <meta http-equiv="Refresh" content="2; url='http://localhost/confirm.php'" />
     </head>
 <body>
 
